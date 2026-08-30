@@ -1,7 +1,7 @@
 {
     "name": "Peaceful Dreams",
-    "image-front": "/assets/img/albums/PD_F.jpg",
-    "image-back": "/assets/img/albums/PD_B.jpg",
+    "image-front": "/DarkGH/assets/img/albums/PD_F.jpg",
+    "image-back": "/DarkGH/assets/img/albums/PD_B.jpg",
     "links": {
         "spotify": "https://open.spotify.com/intl-fr/album/2A7Veza53GszPI2AOUC9TA?si=pVUUJApUSQyUJzRlIypwNQ",
         "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mYIwT-3wZNunJTABlHaRfl2p1LWH9ohfs&si=DClqfonW7cD11Q_I",

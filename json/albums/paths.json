@@ -1,7 +1,7 @@
 {
     "name": "Paths",
-    "image-front": "/assets/img/albums/P_F.jpg",
-    "image-back": "/assets/img/albums/P_B.jpg",
+    "image-front": "/DarkGH/assets/img/albums/P_F.jpg",
+    "image-back": "/DarkGH/assets/img/albums/P_B.jpg",
     "links": {
         "spotify": "https://open.spotify.com/intl-fr/album/3XxOPhwx81pnpFlZOVpZ2h?si=bkCDzcnRQSSnjom2DwBngw",
         "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_m0j6yr0-lQdqo3Bd_GDaDJD_ElN555FWI&si=73HefXqLDLob6XHf",

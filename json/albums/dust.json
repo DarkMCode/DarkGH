@@ -1,7 +1,7 @@
 {
     "name": "Dust",
-    "image-front": "/assets/img/albums/D_F.jpg",
-    "image-back": "/assets/img/albums/D_B.jpg",
+    "image-front": "/DarkGH/assets/img/albums/D_F.jpg",
+    "image-back": "/DarkGH/assets/img/albums/D_B.jpg",
     "links": {
         "spotify": "https://open.spotify.com/intl-fr/album/5m5T6vk7bZP0w0gCmnQNMs?si=95vLvtyUQ-SEHBqrh3ZkzA",
         "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_lZmNzCKd6QaIo6zFYEOsCevCRnoJyXueE&si=mBkxQZZD1nA2B9m_",

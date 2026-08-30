@@ -1,4 +1,4 @@
-fetch("/json/fanlinks.json")
+fetch("/DarkGH/json/fanlinks.json")
     .then(r => r.json())
     .then(async fanlinks => {
 

@@ -1,7 +1,7 @@
 {
     "name": "Not Dead Yet",
-    "image-front": "/assets/img/albums/NDY_F.jpg",
-    "image-back": "/assets/img/albums/NDY_B.jpg",
+    "image-front": "/DarkGH/assets/img/albums/NDY_F.jpg",
+    "image-back": "/DarkGH/assets/img/albums/NDY_B.jpg",
     "links": {
         "spotify": "https://open.spotify.com/intl-fr/album/5PqneO1WmTXNIToe8HzJwW?si=9VvoEjH5TzC2JLoYAG4T_g",
         "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_lMVWuxsgI6pqYF68qMydrcySBFjBNpH-I&si=lEF2xFMtIhpLhDVD",
