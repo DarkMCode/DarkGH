@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Services – DARK G.H.</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header id="header" class="header"></header>
+
+            <script src="/js/header.js"></script>
+            <script>
+                document.addEventListener("headerLoaded", () => {
+                    const services = document.getElementById("services");
+                    services.classList.add("nav-active");
+                });
+            </script>
+
+            <main>
+                <section>
+                    <h1 class="title">Services proposés</h1>
+                    <div class="text spaced">
+                        <p>Composition de musiques originales — Création de pièces musicales uniques, adaptées aux besoins artistiques ou techniques d’un projet.</p>
+                        <p>Ambiances sonores — Conception de paysages sonores immersifs et atmosphériques.</p>
+                        <p>Effets sonores — Création de SFX originaux pour renforcer l’impact visuel, narratif ou interactif.</p>
+                        <p>Musiques adaptatives — Systèmes musicaux évolutifs permettant des transitions dynamiques selon le contexte.</p>
+                        <p>Musiques segmentées — Structures modulaires composées de sections interchangeables pour une intégration flexible.</p>
+                        <p>Mixage et mastering — finalisation et optimisation du rendu sonore.</p>
+                        <p>Consultation artistique — accompagnement dans la direction musicale d’un projet.</p>
+                        <p>Intégration de musiques et effets sonores dans Tabletop Simulator :
+                            <a href="https://darkmcode.github.io/TTS" target="_blank" class="btn btn-transparent" style="margin-top:5px;">
+                                <img src="/assets/logos/DarkMCode/logo_rouge_name_low_contr.png" alt="Icône">
+                            </a>
+                        </p>
+                        <p>Développement — Production technique et créative :
+                            <a href="https://darkmcode.github.io" target="_blank" class="btn btn-transparent" style="margin-top:5px;">
+                                <img src="/assets/logos/DarkMCode/logo_bleu_name.png" alt="Icône">
+                            </a>
+                        </p>
+
+                    </div>
+                </section>
+            </main>
+            
+            <div id="footer"></div>
+
+            <script>
+                fetch("../includes/footer.html")
+                .then(r => r.text())
+                .then(html => {
+                    document.getElementById("footer").innerHTML = html;
+                })
+            </script>
+        </div>
+    </body>
+</html>

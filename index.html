@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Accueil – DARK G.H.</title>     
+        <link rel="stylesheet" href="/css/style.css"> 
+    </head>
+
+    <body>
+        <audio id="low" src="/assets/musics/Davelthys Low Master.mp3" preload="auto"></audio>
+        <audio id="mid" src="/assets/musics/Davelthys Mid Master.mp3" preload="auto"></audio>
+        <audio id="boss" src="/assets/musics/Davelthys Boss Master.mp3" preload="auto"></audio>
+
+        <div class="wrapper">
+            <header id="header" class="header"></header>
+
+            <script src="/js/header.js"></script>
+            <script>
+                document.addEventListener("headerLoaded", () => {
+                    const index = document.getElementById("index");
+                    index.classList.add("nav-active");
+                });
+            </script>
+            
+            <main>
+                <section>
+                    <h1 class="title">Compositions originales et sound design</h1>
+                    <div class="text spaced">
+                        <p class="intro-box">
+                            Des musiques et ambiances conçues pour renforcer l’impact de vos contenus.
+                        </p>
+                    </div>
+                    
+                    <div class="text audio-demo">
+                        <h2 style="margin-top:5px;">
+                            Ambiance sonore évolutive
+                        </h2>
+                        <p>
+                            Démo reproduisant le système audio interactif :<br>
+                            trois ambiances pour une seule musique.<br>
+                        </p>
+
+                        <button id="playStopBtn" class="playbtn"><strong>Play</strong></button>
+
+                        <div class="fader-wrap">
+                            <p><span>Volume : </span><span id="fader-value" class="fader-value">30</span></p>
+                            <input type="range" id="fader" class="fader" min="0" max="1" step="0.01" value="0.3">
+                        </div>
+
+                        <div class="audio-controls">
+                            <button id="amb-low" class="btn btn-disabled" style="min-width: 150px;">Ambiance calme</button>
+                            <button id="amb-mid" class="btn btn-disabled" style="min-width: 150px;">Ambiance moyenne</button>
+                            <button id="amb-boss" class="btn btn-disabled" style="min-width: 150px;">Ambiance intense</button>
+
+                            <script src="/js/audio-demo.js"></script>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <div id="footer"></div>
+
+            <script src="/js/footer.js"></script>
+        </div>
+
+    </body>
+</html>

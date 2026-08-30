@@ -1,0 +1,26 @@
+{
+    "youtube": {
+        "link": "https://www.youtube.com/@Dark_G.H.",
+        "logo": "/assets/logos/plateformes/youtube-logo.png"
+    },
+    "youtube music": {
+        "link": "https://music.youtube.com/channel/UCZ0sTztOkgP6f3GpRDcULww",
+        "logo": "/assets/logos/plateformes/youtube-music-logo.png"
+    },
+    "spotify": {
+        "link": "https://open.spotify.com/intl-fr/artist/6GJpt8rZ8XvDtM541fs0Rp",
+        "logo": "/assets/logos/plateformes/spotify-logo.png"
+    },
+    "apple music": {
+        "link": "https://music.apple.com/us/artist/dark-g-h/1397511078",
+        "logo": "/assets/logos/plateformes/apple-music-logo.png"
+    },
+    "deezer": {
+        "link": "https://link.deezer.com/s/34bqXe0ITMz9lT7kcz98T",
+        "logo": "/assets/logos/plateformes/deezer-logo.png"
+    },
+    "amazon music": {
+        "link": "https://music.amazon.fr/artists/B097FGZXL3/dark-g-h",
+        "logo": "/assets/logos/plateformes/amazon-music-logo.png"
+    }
+}

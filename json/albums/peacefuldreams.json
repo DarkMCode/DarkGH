@@ -1,0 +1,11 @@
+{
+    "name": "Peaceful Dreams",
+    "image-front": "/assets/img/albums/PD_F.jpg",
+    "image-back": "/assets/img/albums/PD_B.jpg",
+    "links": {
+        "spotify": "https://open.spotify.com/intl-fr/album/2A7Veza53GszPI2AOUC9TA?si=pVUUJApUSQyUJzRlIypwNQ",
+        "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_mYIwT-3wZNunJTABlHaRfl2p1LWH9ohfs&si=DClqfonW7cD11Q_I",
+        "apple-music": "https://music.apple.com/fr/album/peaceful-dreams/1624475755",
+        "amazon-music": "https://amazon.fr/music/player/albums/B0B1DWCXPT?marketplaceId=A13V1IB3VIYZZH&musicTerritory=FR&ref=dm_sh_gqfj9fenWPiCz9jT4oA4NO1fR"
+    }
+}

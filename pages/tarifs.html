@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tarifs – DARK G.H.</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header id="header" class="header"></header>
+
+            <script src="/js/header.js"></script>
+            <script>
+                document.addEventListener("headerLoaded", () => {
+                    const tarifs = document.getElementById("tarifs");
+                    tarifs.classList.add("nav-active");
+                });
+            </script>
+
+            <main>
+                <section>
+                    <h1 class="title">Grille Tarifaire</h1>
+                    <p class="text spaced note">Tarifs indicatifs, ajustés selon les cas.</p>
+
+                    <div class="text spaced">
+                        <h2 class="tarifs-subtitle">1) Création musicale</h2>
+
+                        <p><strong>Composition ➡ 20 à 50 € / minute de musique</strong></p>
+                        <p><strong>Ambiances sonores ➡ 20 à 50 € / ambiance</strong></p>
+                        <p><strong>Effets sonores ➡ 2 à 20 € / effet</strong></p>
+                    </div>
+
+                    <br>
+
+                    <div class="text spaced">
+                        <h2 class="tarifs-subtitle">2) Post production</h2>
+
+                        <p><strong>Mixage / mastering ➡ 60 à 120 € / piste</strong></p>
+                    </div>
+
+                    <br>
+
+                    <div class="text spaced">
+                        <h2 class="tarifs-subtitle">3) Musique interactive</h2>
+
+                        <p><strong>Musiques adaptatives ➡ cout composition + 5 à 15 € / minute de musique / couche</strong></p>
+                        <p><strong>Musiques segmentées ➡ 20 à 50 € / segment</strong></p>
+                    </div>
+
+                    <br>
+
+                    <div class="text spaced">
+                        <h2 class="tarifs-subtitle">4) Services complémentaires</h2>
+
+                        <p><strong>Accompagnement artistique ➡ 10 à 20 € / heure</strong></p>
+                        <p><strong>Intégration TTS ➡ 25 € / heure</strong></p>
+                    </div>
+
+                    <br>
+
+                    <div class="text spaced">
+                        <h2 class="tarifs-subtitle">REPRISES MINEURES</h2>
+
+                        <p>Jusqu’à 3 reprises mineures (ne nécessitant pas une refonte complète) sont offertes, selon l’importance du projet.</p>
+                    </div>
+                    
+                </section>
+            </main>
+
+            <div id="footer"></div>
+
+            <script>
+                fetch("/includes/footer.html")
+                .then(r => r.text())
+                .then(html => {
+                    document.getElementById("footer").innerHTML = html;
+                })
+            </script>
+        </div>
+    </body>
+</html>

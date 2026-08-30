@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact – DARK G.H.</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header id="header" class="header"></header>
+
+            <script src="/js/header.js"></script>
+            <script>
+                document.addEventListener("headerLoaded", () => {
+                    const contact = document.getElementById("contact");
+                    contact.classList.add("nav-active");
+                });
+            </script>
+
+            <main>
+                <section>
+                    <h1 class="title">Contact</h1>
+                    <div class="text spaced">
+                        <p><strong>Nom</strong><br>Guillaume HUGUENOT</p>
+                        <p><strong>Email</strong><br><a href="mailto:darkmcode@gmail.com">darkmcode@gmail.com</a></p>
+                        <p><strong>Téléphone</strong><br>06 46 71 93 81</p>
+                        <p><strong>SIRET</strong><br>à venir</p>
+                    </div>
+                </section>
+            </main>
+
+            <div id="footer"></div>
+
+            <script>
+                fetch("../includes/footer.html")
+                .then(r => r.text())
+                .then(html => {
+                    document.getElementById("footer").innerHTML = html;
+                })
+            </script>
+        </div>
+    </body>
+</html>

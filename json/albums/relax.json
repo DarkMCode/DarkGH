@@ -1,0 +1,11 @@
+{
+    "name": "Relax",
+    "image-front": "/assets/img/albums/R_F.jpg",
+    "image-back": "/assets/img/albums/R_B.jpg",
+    "links": {
+        "spotify": "https://open.spotify.com/intl-fr/album/3bKOD59GQ1lEN7f0CkeZhk?si=xcb289AER_Ce3saE7oYWxQ",
+        "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_l5K6L4yvpYUP0HI0FH75aXA6_zWxBwZ6E&si=672Su2gQmMA9dmc3",
+        "deezer": "https://link.deezer.com/s/345vkQf3PfUpOxbwwaIWx",
+        "apple-music": "https://music.apple.com/fr/album/relax/1478720471"
+    }
+}
