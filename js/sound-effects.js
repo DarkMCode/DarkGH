@@ -1,4 +1,4 @@
-import { getWaveform, drawWaveform } from "/DarkGH/js/waveForm.js?module";
+import { getWaveform, drawWaveform } from "/DarkGH/js/waveform.js";
 
 
 fetch("/DarkGH/json/soundEffects.json")
