@@ -4,7 +4,7 @@ fetch("/DarkGH/json/fanlinks.json")
 
         const table = document.getElementById("fanlinks-table");
 
-        table.style.width = "200px";
+        table.style.width = "250px";
 
         for (const name in fanlinks) {
             const link = fanlinks[name]["link"];
@@ -20,7 +20,7 @@ fetch("/DarkGH/json/fanlinks.json")
             const cell = document.createElement("td");
 
             cell.style.backgroundImage = `url("${logo}")`;
-            cell.style.backgroundSize = "100px auto";
+            cell.style.backgroundSize = "150px auto";
             cell.style.backgroundPosition = "center";
             cell.style.backgroundRepeat = "no-repeat";
 
