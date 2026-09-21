@@ -1,7 +1,7 @@
-import { getWaveform, drawWaveform } from "/DarkGH/js/waveform.js";
+import { getWaveform, drawWaveform } from "/js/waveform.js";
 
 
-fetch("/DarkGH/json/soundEffects.json")
+fetch("/json/soundEffects.json")
     .then(r => r.json())
     .then(async files => {
 
@@ -44,7 +44,7 @@ fetch("/DarkGH/json/soundEffects.json")
             let audioBuffer;
 
             try {
-                const response = await fetch("/DarkGH/assets/soundEffects/" + file);
+                const response = await fetch("/assets/soundEffects/" + file);
 
                 if (!response.ok) {
                     throw new Error("Fichier introuvable");
@@ -97,7 +97,7 @@ fetch("/DarkGH/json/soundEffects.json")
 
                     previousCell = cell;
 
-                    player.src = "/DarkGH/assets/soundEffects/" + file;
+                    player.src = "/assets/soundEffects/" + file;
                     player.play();
 
                     const updateWaveform = () => {

@@ -3,12 +3,12 @@ const containers = document.querySelectorAll(".album-container");
 containers.forEach(container => {
     const albumId = container.dataset.album;
 
-    fetch("/DarkGH/includes/album-template.html")
+    fetch("/includes/album-template.html")
         .then(r => r.text())
         .then(template => {
             container.innerHTML = template;
 
-            return fetch(`/DarkGH/json/albums/${albumId}.json`);
+            return fetch(`/json/albums/${albumId}.json`);
         })
         .then(r => r.json())
         .then(data => {
@@ -46,7 +46,7 @@ function openMenu(event, links) {
 
         const img = document.createElement("img");
 
-        img.src = `/DarkGH/assets/logos/plateformes/${name}-logo.png`;
+        img.src = `/assets/logos/plateformes/${name}-logo.png`;
         img.classList.add("menu-logo");
 
         a.appendChild(img);
