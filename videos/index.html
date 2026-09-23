@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Portfolio – DARK G.H.</title>     
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="icon" type="image/png" href="/assets/ico/ico.png">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header id="header" class="header"></header>
+
+            <script src="/js/header.js"></script>
+            <script>
+                document.addEventListener("headerLoaded", () => {
+                    const videos = document.getElementById("videos");
+                    videos.classList.add("nav-active");
+                });
+            </script>
+
+            <main>
+                <section>
+                    <h1 class="title">Vidéos</h1>
+                    <div class="text spaced">
+                        <div class="main-grid">
+                            <div>
+                                <h2 class="name">Earth's Voice</h2>
+                                <p class="note" style="margin: -10px auto 10px auto">Clip</p>
+                                <iframe 
+                                    class="youtube"
+                                    src="https://www.youtube.com/embed/sxleY-Re1Uk" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <div>
+                                <h2 class="name">Death Note – L's Theme (Cover)</h2>
+                                <p class="note" style="margin: -10px auto 10px auto">Home Session</p>
+                                <iframe 
+                                    class="youtube"
+                                    src="https://www.youtube.com/embed/kGpFzeIDtU0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 30px;">
+                            <h2 class="name">This is my Soul</h2>
+                            <p class="note" style="margin: -10px auto 10px auto">Clip</p>
+                            <iframe 
+                                class="youtube"
+                                src="https://www.youtube.com/embed/5Ky1PoOssBw" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>           
+                </section>
+            </main>
+            
+            <div id="footer"></div>
+
+            <script src="/js/footer.js"></script>
+        </div>
+    </body>
+</html>

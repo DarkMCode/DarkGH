@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Mentions légales – DARK G.H.</title>
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="icon" type="image/png" href="/assets/ico/ico.png">
+	</head>
+
+	<body>
+		<div class="wrapper">
+            <header id="header" class="header"></header>
+
+            <script src="/js/header.js"></script>
+            <script>
+                document.addEventListener("headerLoaded", () => {
+                    const mentions_legales = document.getElementById("mentions-legales");
+                    mentions_legales.classList.add("nav-active");
+                });
+            </script>
+
+			<main>
+				<section>
+					<h1 class="title">Mentions légales</h1>
+					<div class="text spaced">
+						<p><strong>Nom</strong><br>Guillaume HUGUENOT</p>
+						<p><strong>Statut</strong><br>Micro-entrepreneur</p>
+						<p><strong>Email</strong><br><a href="mailto:darkmcode@gmail.com">darkmcode@gmail.com</a></p>
+						<p><strong>SIRET</strong><br>à venir</p>
+						<p><strong>Responsable de publication</strong><br>Guillaume HUGUENOT</p>
+						<p><strong>Hébergeur</strong><br>GitHub Inc.<br>88 Colin P Kelly Jr St, San Francisco, CA 94107, USA<br>+1 (877) 448-4820</p>
+					</div>
+				</section>
+			</main>
+			
+            <div id="footer"></div>
+
+            <script src="/js/footer.js"></script>
+		</div>
+	</body>
+</html>
