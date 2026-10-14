@@ -13,6 +13,8 @@
   --nav: #8f8380;
   --shiny: #c6ff4a;
   --play: #1f8a4c;
+  --c_width: 860px;
+  --fader_width: 275px;
   --font: 'Segoe UI', sans-serif;
 }
 
@@ -145,7 +147,7 @@ a:hover {
 
 .text {
   margin: 0 auto;
-  max-width: 860px;
+  max-width: var(--c_width);
   color: var(--text);
   font-size: 1.2rem;
   line-height: 1.6;
@@ -273,7 +275,7 @@ a:hover {
   appearance: none;
   margin: 0px auto 30px auto;
   background: var(--bg);
-  width: 275px;
+  width: var(--fader_width);
   accent-color: var(--accent);
 }
 
@@ -303,6 +305,42 @@ a:hover {
   font-family: 'CormorantGaramond';
   margin-right: 20px;
   margin-bottom: 0px;
+}
+
+.progress-container {
+    width: var(--fader_width);
+    height: 12px;
+    background: var(--bg);
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to right, #2ecc71, #f1c40f, #e74c3c); /* Vert -> Jaune -> Rouge */
+    border-radius: 6px;
+    border: 3px solid black;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg);
+    transition: width 0.4s ease;
+}
+
+.progress-cover {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    height: 100%;
+    width: 87.5%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: var(--bg);
+    transition: width 0.4s ease;
 }
 
 .main-grid {

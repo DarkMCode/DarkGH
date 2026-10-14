@@ -10,9 +10,14 @@
     </head>
 
     <body>
-        <audio id="low" src="/assets/musics/Davelthys Low Master.mp3" preload="auto"></audio>
-        <audio id="mid" src="/assets/musics/Davelthys Mid Master.mp3" preload="auto"></audio>
-        <audio id="boss" src="/assets/musics/Davelthys Boss Master.mp3" preload="auto"></audio>
+        <audio id="a1" src="/assets/musics/Davelthys 1 Master.mp3" preload="auto"></audio>
+        <audio id="a2" src="/assets/musics/Davelthys 2 Master.mp3" preload="auto"></audio>
+        <audio id="a3" src="/assets/musics/Davelthys 3 Master.mp3" preload="auto"></audio>
+        <audio id="a4" src="/assets/musics/Davelthys 4 Master.mp3" preload="auto"></audio>
+        <audio id="a5" src="/assets/musics/Davelthys 5 Master.mp3" preload="auto"></audio>
+        <audio id="a6" src="/assets/musics/Davelthys 6 Master.mp3" preload="auto"></audio>
+        <audio id="a7" src="/assets/musics/Davelthys 7 Master.mp3" preload="auto"></audio>
+        <audio id="a8" src="/assets/musics/Davelthys 8 Master.mp3" preload="auto"></audio>
 
         <div class="wrapper">
             <header id="header" class="header"></header>
@@ -51,12 +56,16 @@
                         </div>
 
                         <div class="audio-controls">
-                            <button id="amb-low" class="btn btn-disabled" style="min-width: 150px;">Ambiance calme</button>
-                            <button id="amb-mid" class="btn btn-disabled" style="min-width: 150px;">Ambiance moyenne</button>
-                            <button id="amb-boss" class="btn btn-disabled" style="min-width: 150px;">Ambiance intense</button>
-
-                            <script src="/js/audio-demo.js"></script>
+                            <button id="amb_down" class="btn btn-disabled" style="min-width: 150px;">Plus calme</button>
+                            <button id="amb_up" class="btn btn-disabled" style="min-width: 150px;">Plus intense</button>
                         </div>
+
+                        <div id="progress-container" class="progress-container">
+                            <div id="progress-bar" class="progress-bar"></div>
+                            <div id="progress-cover" class="progress-cover"></div>
+                        </div>
+
+                        <script src="/js/audio-demo.js"></script>
                     </div>
                 </section>
             </main>
