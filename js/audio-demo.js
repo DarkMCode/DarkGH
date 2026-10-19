@@ -157,8 +157,6 @@ amb_down.addEventListener("click", () => {
         amb_down.classList.add("btn-disabled");
     }
 
-    disable_btns_tmp();
-
     updateProgressBar();
 });
 
@@ -175,8 +173,6 @@ amb_up.addEventListener("click", () => {
     } else if (index === 7) {
         amb_up.classList.add("btn-disabled");
     }
-
-    disable_btns_tmp();
 
     updateProgressBar();
 });
