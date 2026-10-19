@@ -20,62 +20,66 @@ let t = null;
 let index = 0;
 
 let vol = volumeSlider.value;
+const TIME = 1000;
 
 let isPlaying = false;
 
-t1.volume = 0.3;
-t2.volume = 0.3;
-t3.volume = 0.3;
-t4.volume = 0.3;
-t5.volume = 0.3;
-t6.volume = 0.3;
-t7.volume = 0.3;
-t8.volume = 0.3;
+tracks.forEach(track => {
+    track.volume = 0.3;
+    track.loop = true;
+});
+
 
 function fadeIn(audio) {
-    let v = audio.volume;
-    const interval = setInterval(() => {
-        v += 0.01;
-        if (v >= vol) {
+    // Si un fade est déjà en cours sur cette piste, on l'arrête
+    if (audio.fadeTimer) {
+        clearInterval(audio.fadeTimer);
+    }
+
+    let progress = 0;
+    let steps = vol / 0.01;
+    let interval = TIME / steps;
+
+    audio.fadeTimer = setInterval(() => {
+        progress += 0.01 / vol;
+        if (progress >= 1) {
             audio.volume = vol;
-            clearInterval(interval);
+            clearInterval(audio.fadeTimer);
+            audio.fadeTimer = null;
         } else {
-            audio.volume = v;
+            audio.volume = vol * Math.sqrt(progress);
         }
-    }, 90);
+    }, interval);
 }
 
 function fadeOut(audio) {
-    let v = audio.volume;
-    const interval = setInterval(() => {
-        v -= 0.01;
-        if (v <= 0) {
+    // Si un fade est déjà en cours sur cette piste, on l'arrête
+    if (audio.fadeTimer) {
+        clearInterval(audio.fadeTimer);
+    }
+
+    let progress = 1;
+    let steps = vol / 0.01;
+    let interval = TIME / steps;
+
+    audio.fadeTimer = setInterval(() => {
+        progress -= 0.01 / vol;
+
+        if (progress <= 0) {
             audio.volume = 0;
-            clearInterval(interval);
+            clearInterval(audio.fadeTimer);
+            audio.fadeTimer = null;
         } else {
-            audio.volume = v;
+            audio.volume = vol * Math.sqrt(progress);
         }
-    }, 90);
+    }, interval);
 }
 
 function startAudio() {
-    t1.play();
-    t2.play();
-    t3.play();
-    t4.play();
-    t5.play();
-    t6.play();
-    t7.play();
-    t8.play();
-
-    t1.volume = 0;
-    t2.volume = 0;
-    t3.volume = 0;
-    t4.volume = 0;
-    t5.volume = 0;
-    t6.volume = 0;
-    t7.volume = 0;
-    t8.volume = 0;
+    tracks.forEach(track => {
+        track.play();
+        track.volume = 0;
+    });
 
     if (t === null) t = t1;
 
@@ -96,22 +100,14 @@ function startAudio() {
 }
 
 function stopAudio() {
-    t1.pause();
-    t1.currentTime = 0;
-    t2.pause();
-    t2.currentTime = 0;
-    t3.pause();
-    t3.currentTime = 0;
-    t4.pause();
-    t4.currentTime = 0;
-    t5.pause();
-    t5.currentTime = 0;
-    t6.pause();
-    t6.currentTime = 0;
-    t7.pause();
-    t7.currentTime = 0;
-    t8.pause();
-    t8.currentTime = 0;
+    tracks.forEach(track => {
+        if (track.fadeTimer) {
+            clearInterval(track.fadeTimer);
+            track.fadeTimer = null;
+        }
+        track.pause();
+        track.currentTime = 0;
+    });
 
     amb_down.classList.add("btn-disabled");
     amb_up.classList.add("btn-disabled");
@@ -131,6 +127,22 @@ playStopBtn.addEventListener("click", () => {
     else stopAudio();
 });
 
+function disable_btns_tmp() {
+    if (index > 0) {
+        amb_down.classList.add("btn-disabled");
+        setTimeout(() => {
+            amb_down.classList.remove("btn-disabled");
+        }, TIME);
+    }
+
+    if (index < 7) {
+        amb_up.classList.add("btn-disabled");
+        setTimeout(() => {
+            amb_up.classList.remove("btn-disabled");
+        }, TIME);
+    }
+}
+
 amb_down.addEventListener("click", () => {
     if (index === 0) return;
 
@@ -141,11 +153,11 @@ amb_down.addEventListener("click", () => {
 
     if (index === 6) {
         amb_up.classList.remove("btn-disabled");
-    }
-
-    if (index === 0) {
+    } else if (index === 0) {
         amb_down.classList.add("btn-disabled");
     }
+
+    disable_btns_tmp();
 
     updateProgressBar();
 });
@@ -160,11 +172,11 @@ amb_up.addEventListener("click", () => {
 
     if (index === 1) {
         amb_down.classList.remove("btn-disabled");
-    }
-
-    if (index === 7) {
+    } else if (index === 7) {
         amb_up.classList.add("btn-disabled");
     }
+
+    disable_btns_tmp();
 
     updateProgressBar();
 });
