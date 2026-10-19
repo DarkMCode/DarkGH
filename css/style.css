@@ -230,6 +230,29 @@ a:hover {
     height: auto;
 }
 
+.playbtn {
+    display: inline-block;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    margin-top: 5px;
+    border-radius: 6px;
+    background-color: var(--play);
+    padding: 7px 7px;
+    min-width: 100px;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.playbtn:hover {
+  filter: brightness(1.15);
+}
+
+.playbtn:active {
+  transform: translateY(1px);
+}
+
 .btn {
     display: inline-block;
     transition: background-color 0.2s ease, transform 0.2s ease;
@@ -243,29 +266,19 @@ a:hover {
     text-decoration: none;
 }
 
-.playbtn {
-    display: inline-block;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    margin-top: 5px;
-    border-radius: 6px;
-    background-color: var(--play);
-    padding: 7px 7px;
-    min-width: 100px;
-    color: black;
-    font-weight: 500;
-    font-size: 20px;
-    text-decoration: none;
-}
-
 .btn img {
     vertical-align: middle;
     max-height: 30px;
 }
 
 .btn:hover {
-    transform: translate(1px, 1px);
-    opacity: 0.5;
+    filter: brightness(1.15);
     color: var(--text);
+    cursor: pointer;
+}
+
+.btn:active {
+  transform: translateY(1px);
 }
 
 .btn-disabled {
