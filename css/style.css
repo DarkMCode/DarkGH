@@ -4,6 +4,7 @@
   --bgbtn: #3b1c1e;
   --text: #d4cfc9;
   --note: #666666;
+  --hq: #e57373;
   --subtitle: #6B4A4C;
   --accent: #5a2326;
   --shadow: #26c6da14;
@@ -22,6 +23,11 @@
   font-style: normal;
   src: url("/assets/fonts/CormorantGaramond-Regular.ttf");
   font-family: "CormorantGaramond";
+}
+
+@font-face {
+  font-family: "HQ";
+  src: url("/assets/fonts/HEROQUESTCYRUNICORN.TTF");
 }
 
 body {
@@ -175,6 +181,11 @@ a:hover {
   font-style: italic;
 }
 
+.hq {
+  font-family: "HQ";
+  color: var(--hq);
+}
+
 .name {
   margin-bottom: 5px;
   margin-top: 5px;
@@ -184,6 +195,7 @@ a:hover {
 
 .audio-demo {
     margin-bottom: 20px;
+    max-width: calc(var(--c_width) / 2);
 }
 
 .intro-box {
@@ -320,15 +332,31 @@ a:hover {
 
 .progress-bar {
     position: absolute;
+    overflow: hidden;
     top: 0;
     right: 0;
-    background: linear-gradient(to right, #2ecc71, #f1c40f, #e74c3c); /* Vert -> Jaune -> Rouge */
+    background: linear-gradient(to right, #2ecc71, #f1c40f, #e74c3c);
     border-radius: 6px;
     border: 3px solid black;
     height: 100%;
     width: 100%;
     background-color: var(--bg);
     transition: width 0.4s ease;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: 
+        linear-gradient(black, black) calc(100% * 1 / 8) 0 / 2px 100% no-repeat,
+        linear-gradient(black, black) calc(100% * 2 / 8) 0 / 2px 100% no-repeat,
+        linear-gradient(black, black) calc(100% * 3 / 8) 0 / 2px 100% no-repeat,
+        linear-gradient(black, black) calc(100% * 4 / 8) 0 / 2px 100% no-repeat,
+        linear-gradient(black, black) calc(100% * 5 / 8) 0 / 2px 100% no-repeat,
+        linear-gradient(black, black) calc(100% * 6 / 8) 0 / 2px 100% no-repeat,
+        linear-gradient(black, black) calc(100% * 7 / 8) 0 / 2px 100% no-repeat;
 }
 
 .progress-cover {
